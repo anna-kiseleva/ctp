@@ -1,0 +1,295 @@
+/*RESET*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent;} body {line-height: 1;}ol, ul{list-style:none;} blockquote, q{quotes:none;} blockquote:before, blockquote:after, q:before, q:after{content:'';content:none;} :focus{outline:0;} ins{text-decoration:none;} del{text-decoration:line-through;} table{border-collapse:collapse; border-spacing:0;}
+
+/*Main code*/
+
+body {
+    background: rgba(0,0,0,.05);
+    color: rgba(0,0,0,.9);
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Roboto', sans-serif;
+    height: auto !important;
+    height: 100%;
+    min-height: 100%;
+}
+
+/* style for main map */
+#ManMap {
+	min-width: 300px;
+	min-height: 800px;
+}
+
+
+/* style for infowindow */
+.gm-style-iw {
+width: 300px; 
+min-height: 450px;
+
+}
+
+.centered {
+	text-align: center;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+/* Nav bar and logo */
+
+header {
+    background-color: rgba(0,0,0,.07);
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    display: flex;
+    flex-direction: column;
+}
+
+header .header {
+	padding-left: 4vw;
+	height: 40px;
+	font-weight: 900;
+	font-size: 200%;
+	margin: 20px;
+	/* font-size: 200%;
+	font-weight: 900;
+	text-align: center;
+	margin: 20px; */
+}
+
+header .menuDown {
+    box-shadow: 0 3px 5px rgba(0,0,0,.15);
+}
+
+header .menuUp {
+    box-shadow: none;
+}
+
+header div#navToggle {
+    position: absolute;
+    right: 5vw;
+    top: 4px;
+}
+
+header nav {
+    display: none;
+	position: relative;
+    flex: 1;
+}
+
+header nav ul li {
+    border-bottom: 1px dotted rgba(0,0,0,.1);
+	text-align: right;
+	padding-right: 10vw;
+	padding-bottom: 30px;
+}
+
+header nav ul li:nth-of-type(3) {
+    border-bottom: none; 
+	padding-bottom: 7px;
+}
+
+header nav ul li:last-of-type {
+    border-bottom: none; 
+}
+
+header nav ul li a {
+    display: block;
+    color: rgba(0,0,0,.65);
+	font-size: 130%;
+    font-weight: 700;
+    padding-top: 30px;
+    text-decoration: none;
+}
+
+header nav ul li:hover a {
+    color: rgb(14, 204, 102);  
+}
+
+#instr{
+	width: 90%;
+	margin: auto;
+}
+
+#cont{
+	width: 80%;
+	margin: auto;
+}
+
+/* Contact form */
+form {
+	background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
+	background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+	margin:auto;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	font-style: italic;
+	font-weight: bold;
+	color: #09C;
+	text-decoration: none;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding:10px;
+	border: 1px solid #999;
+	border: inset 1px solid #333;
+	-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+form h3 {
+	color: rgba(0,0,0,.9);
+}
+	
+input {
+	width: 100%;
+	display:block;
+	border: 1px solid #999;
+	height: 25px;
+	-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+textarea {
+	min-width: 100%;
+	/* height:150px; */
+	display:block;
+}
+	
+input.button {
+	width:100px;
+	background:#09C;
+	color:#fff;
+	height:30px;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	border: 1p solid #999;
+}
+	
+input.button:hover {
+	background:#fff;
+	color:#09C;
+}
+	
+textarea:focus, input:focus {
+
+	-webkit-box-shadow: 0px 0px 5px #09C;
+	-moz-box-shadow: 0px 0px 5px #09C;
+	box-shadow: 0px 0px 5px #09C;
+}
+
+/* contact form validation */
+#email_validation, #name_validation {
+    display:none;
+}
+
+label.required:after {
+	content:'*';
+	color:red;
+}
+
+span.error {
+	background-color:#FFDFDF;
+	color:red;
+}
+.row {
+	margin:5px;
+}
+
+/* stretching section video  */
+#video1 {
+	width: 100% auto;
+    min-width: 100%;
+	height: 35vw;
+}
+
+/* for medium screens */
+
+@media screen and (min-width: 800px) {
+	
+/* Nav bar */
+
+header #navToggle {
+    display: none;    
+}
+
+header {
+    flex-direction: row;
+}
+
+header .header {
+	padding-left: 40px;
+}
+
+header nav {
+    display: block;
+}
+
+header nav ul {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-end;   
+	position: relative; 
+}
+
+header nav ul li {
+	border-bottom: none;
+	width: 200px;
+	padding-right: 0;
+	/* padding-bottom: 0; */
+	text-align: center;
+}
+
+header nav ul li  a{
+	text-align: center;
+}
+
+h2{
+	font-size: 150%;
+}
+
+#instr{
+	width: 80%;
+	margin: auto;
+	font-size: 130%;
+}
+
+#cont{
+	width: 50%;
+	margin: auto;
+}
+
+}
+
+/* for large screens */
+@media screen and (min-width: 1200px) {
+
+header .header {
+	padding-left: 20vw;
+}
+
+/* style for infowindow */
+.gm-style-iw {
+width: 500px; 
+min-height: 450px;
+
+}
+
+.current {
+   color: rgb(7,112,56) !important;
+}
+
+#instr{
+	width: 60%;
+	margin: auto;
+}
+
+#cont{
+	width: 30%;
+	margin: auto;
+}
+
+
+
+}

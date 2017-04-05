@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DashCamShare - Instructions</title>
+		<meta charset='utf-8'>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="style.css"> <!-- link to my custom css file -->
+		
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,900,400italic&effect=fire' rel='stylesheet' type='text/css'> <!-- link to Google font -->
+		<link rel="stylesheet" type="text/css" href="css/navicon.css"  media="all"> <!-- link to navicon css file -->
+		
+		<!-- jQuery to use for datepicker and mobile nav bar
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> <!-- link to jQuery file -->
+		
+		<script type="text/javascript" src="js/script.js"></script> <!-- link to my custom JavaScript file -->
+		
+		
+		
+	</head>
+	
+	<body>
+		
+		<header>
+			<div class="menuUp">
+				<h1 class="header">DashCamShare</h1>
+				<div id="navToggle">
+					<a class="navicon-button x">
+						<div class="navicon"></div>
+					</a>
+				</div>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="instructions.html">Instructions</a></li>
+					<li class="current"><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<br>
+		<div id="cont">
+			<h2>Contact Form</h2>
+			<br>
+			<p>Please leave us a message with your complaint or suggestion. We'll contact you shortly.</p>
+			<br>
+
+				<form id="contact_form" action="FormMail.php#form_feedback" method="POST" onsubmit="return validateForm();" enctype="multipart/form-data">
+					<div class="row">
+						<label class="required" for="name">Your name:</label><br />
+						<input id="name" name="name" type="text" value="" size="30" /><br />
+						<span id="name_validation" class="error"></span>
+					</div>
+					<div class="row">
+						<label class="required" for="email">Your email:</label><br />
+						<input id="email" name="email" type="text" value="" size="30" /><br />
+						<span id="email_validation" class="error"></span>
+					</div>
+					<div class="row">
+						<label class="required" for="message">Your message:</label><br />
+						<textarea id="message" name="message" rows="7"></textarea><br />
+						<span id="message_validation" class="error"></span>
+					</div>
+					
+					<input  class='button' type="submit" value="Send email" />
+				</form>
+				
+
+		</div>
+
+	</body>
+</html>								
